@@ -25,4 +25,5 @@
     <string name="menu_sync_to_baidu_cloud">Sync to Baidu Cloud Now</string>
 
     <string name="edit_before_call">Edit number before call</string>
+    <string name="menu_sendViaSMS">Send contact via SMS</string>
 </resources>
