@@ -50,7 +50,7 @@ public class QuickContactListFragment extends Fragment {
     private Listener mListener;
     private String mMimeType;
     private ClipboardManager mClipBoard;
-    private Toast longPressToast;
+    private Toast mLongPressToast;
 
     public QuickContactListFragment(String mimeType) {
         setRetainInstance(true);
@@ -66,7 +66,8 @@ public class QuickContactListFragment extends Fragment {
 
         mFragmentContainer.setOnClickListener(mOutsideClickListener);
         mClipBoard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
-        longPressToast = Toast.makeText(getActivity(), R.string.quick_contact_copied_toast, Toast.LENGTH_SHORT);
+        mLongPressToast = Toast.makeText(getActivity(),
+                R.string.toast_text_copied, Toast.LENGTH_SHORT);
 
         configureAdapter();
         return mFragmentContainer;
@@ -192,9 +193,10 @@ public class QuickContactListFragment extends Fragment {
         @Override
         public boolean onLongClick(View v) {
             final Action action = (Action) v.getTag();
-            ClipData clip = android.content.ClipData.newPlainText(action.getSubtitle(), action.getBody());
+            ClipData clip = android.content.ClipData.newPlainText(
+                    action.getSubtitle(), action.getBody());
             mClipBoard.setPrimaryClip(clip);
-            longPressToast.show();
+            mLongPressToast.show();
             return true;
         }
     };
