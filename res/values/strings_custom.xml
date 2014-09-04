@@ -18,4 +18,11 @@
 
     <!-- Toast displayed when QuickContact Item is copied by longpressed -->
     <string name="quick_contact_copied_toast">"Copied to clipboard"</string>
+
+    <!-- The menu item to filter the list of auto_sync_to_baidu_cloud -->
+    <string name="menu_auto_sync_to_baidu_cloud">Auto sync to Baidu Cloud</string>
+    <!-- The menu item to filter the list of sync_to_baidu_cloud -->
+    <string name="menu_sync_to_baidu_cloud">Sync to Baidu Cloud Now</string>
+
+    <string name="edit_before_call">Edit number before call</string>
 </resources>
